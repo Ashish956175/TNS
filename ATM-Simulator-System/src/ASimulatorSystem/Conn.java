@@ -14,7 +14,7 @@ public class Conn{
         Properties props = new Properties();
         String url = "jdbc:mysql:///atm_simulator";
         String user = "root";
-        String password = "passward";
+        String password = "Ashish@976620";
 
         // Try to load configuration from config.properties in project root
         try (InputStream in = new FileInputStream("config.properties")){

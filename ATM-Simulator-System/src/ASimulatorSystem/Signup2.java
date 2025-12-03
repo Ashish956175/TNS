@@ -85,6 +85,11 @@ public class Signup2 extends JFrame implements ActionListener{
         r2.setFont(new Font("Raleway", Font.BOLD, 14));
         r2.setBackground(Color.WHITE);
         
+        ButtonGroup senior = new ButtonGroup();
+        senior.add(r1);
+        senior.add(r2);
+        
+        
         r3 = new JRadioButton("Yes");
         r3.setFont(new Font("Raleway", Font.BOLD, 14));
         r3.setBackground(Color.WHITE);
@@ -92,6 +97,10 @@ public class Signup2 extends JFrame implements ActionListener{
         r4 = new JRadioButton("No");
         r4.setFont(new Font("Raleway", Font.BOLD, 14));
         r4.setBackground(Color.WHITE);
+        
+        ButtonGroup existAcc = new ButtonGroup();
+        existAcc.add(r3);
+        existAcc.add(r4);
         
         
         String religion[] = {"Hindu","Muslim","Sikh","Christian","Other"};
