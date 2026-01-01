@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Career Progress Portfolio</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+      color: #1e293b;
+    }
+    header {
+      background: linear-gradient(135deg, #0f172a 0%, #164e63 100%);
+      color: white;
+      padding: 2rem;
+      text-align: center;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    }
+    .profile-image {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      margin: 0 auto 1.5rem;
+      border: 4px solid #22d3ee;
+      box-shadow: 0 4px 15px rgba(34, 211, 238, 0.3);
+      object-fit: cover;
+      background: #ffffff;
+    }
+    header h1 {
+      margin: 0.5rem 0 0.5rem 0;
+      font-size: 2.5rem;
+      color: #22d3ee;
+    }
+    header p {
+      margin: 0.5rem 0;
+      font-size: 1.1rem;
+      color: #cffafe;
+    }
+    nav a {
+      color: #cffafe;
+      margin: 0 1.25rem;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s ease;
+      border-bottom: 2px solid transparent;
+      padding-bottom: 0.25rem;
+    }
+    nav a:hover {
+      color: #22d3ee;
+      border-bottom-color: #22d3ee;
+    }
+    .dashboard {
+      display: flex;
+      justify-content: space-around;
+      padding: 2rem;
+      background: #ffffff;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      margin: 2rem;
+      border-radius: 12px;
+    }
+    .card {
+      background: linear-gradient(135deg, #ecf0f1 0%, #d5e8e8 100%);
+      padding: 2rem 1.5rem;
+      border-radius: 12px;
+      text-align: center;
+      flex: 1;
+      margin: 0 1rem;
+      border-left: 4px solid #06b6d4;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 16px rgba(6, 182, 212, 0.2);
+    }
+    .card h2 {
+      color: #164e63;
+      margin: 0 0 1rem 0;
+    }
+    .card p {
+      font-size: 2rem;
+      font-weight: bold;
+      color: #0f172a;
+      margin: 0;
+    }
+    .skills, .projects, .timeline {
+      padding: 3rem 2rem;
+      background: #ffffff;
+      margin: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    .skills h2, .projects h2, .timeline h2 {
+      color: #0f172a;
+      border-bottom: 3px solid #06b6d4;
+      padding-bottom: 1rem;
+      margin-top: 0;
+    }
+    .skill {
+      margin-bottom: 1.5rem;
+    }
+    .skill-name {
+      margin-bottom: .5rem;
+      font-weight: bold;
+      color: #164e63;
+    }
+    .progress {
+      background: #e0f2fe;
+      border-radius: 8px;
+      overflow: hidden;
+      height: 16px;
+      box-shadow: inset 0 2px 4px rgba(0,0,0,0.1);
+    }
+    .progress-bar {
+      height: 100%;
+      background: linear-gradient(90deg, #06b6d4 0%, #22d3ee 100%);
+      width: 0;
+      transition: width 1s ease-in-out;
+      border-radius: 8px;
+    }
+    .project-card {
+      background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+      border-radius: 10px;
+      padding: 1.5rem;
+      margin-bottom: 1.5rem;
+      box-shadow: 0 4px 8px rgba(6, 182, 212, 0.15);
+      border-left: 5px solid #06b6d4;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .project-card:hover {
+      transform: translateX(5px);
+      box-shadow: 0 6px 12px rgba(6, 182, 212, 0.25);
+    }
+    .project-card h3 {
+      margin: 0 0 0.5rem 0;
+      color: #164e63;
+      font-size: 1.3rem;
+    }
+    .project-card p {
+      margin: 0.3rem 0;
+      color: #0f172a;
+    }
+    .timeline-item {
+      background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+      border-left: 5px solid #06b6d4;
+      padding: 1.5rem;
+      margin-bottom: 1.5rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(6, 182, 212, 0.15);
+      transition: transform 0.3s ease;
+    }
+    .timeline-item:hover {
+      transform: translateX(5px);
+    }
+    .timeline-item strong {
+      color: #164e63;
+      font-size: 1.1rem;
+    }
+    footer {
+      background: linear-gradient(135deg, #0f172a 0%, #164e63 100%);
+      color: white;
+      text-align: center;
+      padding: 1.5rem;
+      margin-top: 2rem;
+      box-shadow: 0 -4px 12px rgba(0,0,0,0.1);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="peeky.jpg" alt="Profile Picture" class="profile-image">
+    <h1>Peaky Blinders</h1>
+    <p>Engineering Student | Career Progress Tracker</p>
+    <nav>
+      <a href="portfulio.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="skills-detail.html">Skills</a>
+      <a href="projects-detail.html">Projects</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Dashboard -->
+  <section id="dashboard" class="dashboard">
+    <div class="card">
+      <h2>Projects</h2>
+      <p id="projectsCount">0</p>
+    </div>
+    <div class="card">
+      <h2>Certifications</h2>
+      <p id="certCount">0</p>
+    </div>
+    <div class="card">
+      <h2>Skills Mastered</h2>
+      <p id="skillsCount">0</p>
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section id="skills" class="skills">
+    <h2>Skills Progress</h2>
+    <div class="skill">
+      <div class="skill-name">JavaScript</div>
+      <div class="progress"><div class="progress-bar" data-progress="80"></div></div>
+    </div>
+    <div class="skill">
+      <div class="skill-name">Python</div>
+      <div class="progress"><div class="progress-bar" data-progress="70"></div></div>
+    </div>
+    <div class="skill">
+      <div class="skill-name">Data Structures</div>
+      <div class="progress"><div class="progress-bar" data-progress="60"></div></div>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects" class="projects">
+    <h2>Projects</h2>
+    <div class="project-card">
+      <h3>Smart Attendance System</h3>
+      <p>Status: Completed</p>
+      <p>Tech Stack: Python, OpenCV</p>
+    </div>
+    <div class="project-card">
+      <h3>Portfolio Dashboard</h3>
+      <p>Status: In Progress</p>
+      <p>Tech Stack: HTML, CSS, JS</p>
+    </div>
+  </section>
+
+  <!-- Timeline -->
+  <section id="timeline" class="timeline">
+    <h2>Career Timeline</h2>
+    <div id="timelineContainer"></div>
+  </section>
+
+  <footer>
+    <p>© 2025 Peaky Blinders | Connect: LinkedIn | GitHub | Email</p>
+  </footer>
+
+  <script>
+    // Animate progress bars
+    document.querySelectorAll('.progress-bar').forEach(bar => {
+      const value = bar.getAttribute('data-progress');
+      setTimeout(() => {
+        bar.style.width = value + '%';
+      }, 500);
+    });
+
+    // Example dynamic counters
+    let projects = 5, certs = 3, skills = 7;
+    document.getElementById('projectsCount').textContent = projects;
+    document.getElementById('certCount').textContent = certs;
+    document.getElementById('skillsCount').textContent = skills;
+
+    // Timeline data
+    const milestones = [
+      { date: "2022", title: "Completed Data Structures Course" },
+      { date: "2023", title: "Internship at XYZ Company" },
+      { date: "2024", title: "Won Hackathon" },
+      { date: "2025", title: "Published Research Paper" }
+    ];
+
+    const timelineContainer = document.getElementById('timelineContainer');
+    milestones.forEach(m => {
+      const item = document.createElement('div');
+      item.className = 'timeline-item';
+      item.innerHTML = `<strong>${m.date}</strong> - ${m.title}`;
+      timelineContainer.appendChild(item);
+    });
+  </script>
+</body>
+</html>

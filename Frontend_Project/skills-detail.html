@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Skills - Career Progress Portfolio</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+      color: #1e293b;
+    }
+    header {
+      background: linear-gradient(135deg, #0f172a 0%, #164e63 100%);
+      color: white;
+      padding: 2rem;
+      text-align: center;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    }
+    header h1 {
+      margin: 0.5rem 0 0.5rem 0;
+      font-size: 2.5rem;
+      color: #22d3ee;
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      margin-top: 1rem;
+    }
+    nav a {
+      color: #cffafe;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s ease;
+      border-bottom: 2px solid transparent;
+      padding-bottom: 0.25rem;
+    }
+    nav a:hover {
+      color: #22d3ee;
+      border-bottom-color: #22d3ee;
+    }
+    .container {
+      padding: 3rem 2rem;
+      background: #ffffff;
+      margin: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      max-width: 900px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .container h2 {
+      color: #0f172a;
+      border-bottom: 3px solid #06b6d4;
+      padding-bottom: 1rem;
+      margin-top: 0;
+    }
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    .skill-card {
+      background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+      border-left: 5px solid #06b6d4;
+      padding: 1.5rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(6, 182, 212, 0.15);
+      transition: transform 0.3s ease;
+    }
+    .skill-card:hover {
+      transform: translateY(-5px);
+    }
+    .skill-card h3 {
+      color: #164e63;
+      margin: 0 0 0.5rem 0;
+    }
+    .skill-level {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin: 0.5rem 0;
+    }
+    .level-bar {
+      flex: 1;
+      background: #e0f2fe;
+      border-radius: 8px;
+      overflow: hidden;
+      height: 8px;
+    }
+    .level-fill {
+      height: 100%;
+      background: linear-gradient(90deg, #06b6d4 0%, #22d3ee 100%);
+      border-radius: 8px;
+    }
+    .level-text {
+      font-size: 0.9rem;
+      color: #164e63;
+      font-weight: bold;
+      width: 35px;
+    }
+    .skill-description {
+      font-size: 0.9rem;
+      color: #0f172a;
+      margin-top: 0.5rem;
+    }
+    .back-button {
+      display: inline-block;
+      background: linear-gradient(135deg, #06b6d4 0%, #22d3ee 100%);
+      color: white;
+      padding: 0.75rem 1.5rem;
+      border-radius: 8px;
+      text-decoration: none;
+      margin-top: 1rem;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .back-button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(6, 182, 212, 0.3);
+    }
+    footer {
+      background: linear-gradient(135deg, #0f172a 0%, #164e63 100%);
+      color: white;
+      text-align: center;
+      padding: 1.5rem;
+      margin-top: 2rem;
+      box-shadow: 0 -4px 12px rgba(0,0,0,0.1);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>My Skills</h1>
+    <nav>
+      <a href="portfulio.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="skills-detail.html">Skills</a>
+      <a href="projects-detail.html">Projects</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <div class="container">
+    <h2>Technical Skills & Proficiencies</h2>
+    
+    <div class="skills-grid">
+      <div class="skill-card">
+        <h3>JavaScript</h3>
+        <div class="skill-level">
+          <div class="level-bar"><div class="level-fill" style="width: 80%;"></div></div>
+          <div class="level-text">80%</div>
+        </div>
+        <p class="skill-description">Proficient in ES6+, async programming, and DOM manipulation. Experience with modern frameworks.</p>
+      </div>
+
+      <div class="skill-card">
+        <h3>Python</h3>
+        <div class="skill-level">
+          <div class="level-bar"><div class="level-fill" style="width: 75%;"></div></div>
+          <div class="level-text">75%</div>
+        </div>
+        <p class="skill-description">Strong foundation in data structures, algorithms, and ML libraries like NumPy and Pandas.</p>
+      </div>
+
+      <div class="skill-card">
+        <h3>Web Development</h3>
+        <div class="skill-level">
+          <div class="level-bar"><div class="level-fill" style="width: 85%;"></div></div>
+          <div class="level-text">85%</div>
+        </div>
+        <p class="skill-description">Full-stack expertise with HTML, CSS, React, and responsive design principles.</p>
+      </div>
+
+      <div class="skill-card">
+        <h3>Data Structures</h3>
+        <div class="skill-level">
+          <div class="level-bar"><div class="level-fill" style="width: 80%;"></div></div>
+          <div class="level-text">80%</div>
+        </div>
+        <p class="skill-description">Deep understanding of arrays, linked lists, trees, graphs, and optimization techniques.</p>
+      </div>
+
+      <div class="skill-card">
+        <h3>Machine Learning</h3>
+        <div class="skill-level">
+          <div class="level-bar"><div class="level-fill" style="width: 70%;"></div></div>
+          <div class="level-text">70%</div>
+        </div>
+        <p class="skill-description">Experience with supervised learning, computer vision, and model deployment.</p>
+      </div>
+
+      <div class="skill-card">
+        <h3>Database Design</h3>
+        <div class="skill-level">
+          <div class="level-bar"><div class="level-fill" style="width: 75%;"></div></div>
+          <div class="level-text">75%</div>
+        </div>
+        <p class="skill-description">Proficient with SQL, MongoDB, and database optimization strategies.</p>
+      </div>
+
+      <div class="skill-card">
+        <h3>Git & Version Control</h3>
+        <div class="skill-level">
+          <div class="level-bar"><div class="level-fill" style="width: 90%;"></div></div>
+          <div class="level-text">90%</div>
+        </div>
+        <p class="skill-description">Expert level with Git workflows, branching strategies, and collaborative development.</p>
+      </div>
+
+      <div class="skill-card">
+        <h3>UI/UX Design</h3>
+        <div class="skill-level">
+          <div class="level-bar"><div class="level-fill" style="width: 72%;"></div></div>
+          <div class="level-text">72%</div>
+        </div>
+        <p class="skill-description">Understanding of design principles, accessibility, and user experience best practices.</p>
+      </div>
+    </div>
+
+    <a href="portfulio.html" class="back-button">← Back to Home</a>
+  </div>
+
+  <footer>
+    <p>© 2025 Peaky Blinders | Career Progress Portfolio</p>
+  </footer>
+</body>
+</html>
